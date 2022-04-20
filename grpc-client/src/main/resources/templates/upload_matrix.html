@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+</head>
+<body>
+    <h1>Upload</h1>
+    <br/>
+    <!-- form for uploading matrices: -->
+    <!-- send matrices to /upload for checking -->
+    <form method='POST' action='/upload' enctype='multipart/form-data'>
+        <input type='file' name='A' />
+        <input type='file' name='B' />
+
+        <input type='submit' value='Submit' />
+    </form>
+</body>
+</html>

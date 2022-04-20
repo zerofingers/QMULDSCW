@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrices</title>
+</head>
+<body>
+    <h1>Matrices</h1>
+    <br/>
+    <table>
+        <!-- built in thymeleaf loop (each): -->
+        <!-- loops througb the matrix A: -->
+        <tr th:each="row,iterStat : ${A}">
+            <td th:each="itm,iterStat : ${row}">
+                <p th:text="${itm}"></p>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <table>
+        <!-- built in thymeleaf loop (each): -->
+        <!-- loops througb the matrix B: -->
+        <tr th:each="row,iterStat : ${B}">
+            <td th:each="itm,iterStat : ${row}">
+                <p th:text="${itm}"></p>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    
+    <!-- redirects to /add and /mult to perform the operations on the matrices you want -->
+    <input type="submit" value="add" onclick="window.location='/add';" /> 
+    <input type="submit" value="multiply" onclick="window.location='/mult';" /> 
+    <br/>
+    <br/>
+
+    <!-- back button -->
+    <input type="submit" value="go back" onclick="history.back();" />
+</body>
+</html>

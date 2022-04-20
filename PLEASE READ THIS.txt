@@ -1,0 +1,52 @@
+all files that i have changed have been commented.
+every other file that hasn't is from the lab2 starting point file, found here:
+https://github.com/jdoyle314/ECS656U-796PLab2StartingPoint
+
+-------------------------INITIAL SETUP HELP-------------------------
+
+to get started you should probably watch the lab2 startup video, 
+which can be found on the QM+ page under week 5 (REST):
+https://qmplus.qmul.ac.uk/mod/kalvidres/view.php?id=1886244
+this in conjuction with the lab1 setup video,
+which can be found on the QM+ page under week 2 (RPC, RMI and SOAP):
+https://qmplus.qmul.ac.uk/mod/kalvidres/view.php?id=1531652
+will walk you through the GCP (Google Cloud Platform):
+https://console.cloud.google.com/
+setup. The rest is disclosed in the
+README markdown (/README.md).
+
+you can also create machine image templates which makes making lots
+of servers easy and quick. When on the VM instance page on GCP, 
+select the instance you've made from following week2 and week5 
+tutorials and click on the vertical ... then click on "create 
+machine image". Finally go to Machine images (on the side bar),
+select the image you just created, select the vertical ... again
+and click on "create instance". This is a quick way of creating the 
+8 required instances.
+
+note: you may have to add the tcp:9090 firewall rule to your GCP
+
+----------------------------CODE IP SETUP--------------------------
+
+inside the grpc-client\src\main\java\com\example\grpc\client\grpcclient\PingPongEndpoint.java
+file on line 38 you will see a comment about changing the ips array to the ips of the 
+server instances that you have made. from your GCP VM instance page after activating an instance
+you can simply copy it's ip and replace localhost (localhost is used to debug on the local machine)
+
+---------------------MATRIX UPLOADING + TESTING----------------------
+
+inside the /matrices folder, there should be 3 matrix files. The way i have made the matrices is like so:
+
+11-12-13-14;
+15-16-17-18;
+19-20-21-22;
+23-24-25-26;
+
+each value seperated by a - and each line seperated by a ;
+when uploading the matices, feel free to use the matrices i have provided or make your own.
+
+
+that should be it! it should just work.
+
+finally, hope you enjoyed this year and the modules you picked :) you're graduating congratulations.
+I knew you could do it! Wish you luck in your future endeavours, it was great talking to you i guess lol.

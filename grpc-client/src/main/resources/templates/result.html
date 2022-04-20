@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <!-- for displaying the result of either mult or add -->
+    <h1>Result:</h1>
+    <br/>
+    <table>
+        <tr th:each="row,iterStat : ${C}">
+            <td th:each="itm,iterStat : ${row}">
+                <p th:text="${itm}"></p>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <input type="submit" value="go back" onclick="history.back();" />
+</body>
+</html>
